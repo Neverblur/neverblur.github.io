@@ -16,13 +16,9 @@ const AboutPage = ({ data, location }) => {
         <p>
           While learning better ways to design and architect systems, I'd like
           to keep this blog as a journal to share my thoughts. I think the term
-          "Engineering" comes to Software when there's process involved. From
-          formulating a problem, to designing a solution, implementing, and then
-          finally testing and maintaining said solution.
-        </p>
-        <p>
-          And I believe there's great pleasure in designing robust solutions to
-          problems, and quick "hacks" also have their own place.
+          "Engineering" comes to Software when there's process involved. There's
+          great pleasure in designing a robust solution to a problem, and quick
+          "hacks" also have their own place.
         </p>
         <p>
           Obligatory disclaimer, opinions here represent my own, and not my
