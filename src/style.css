@@ -350,6 +350,7 @@ a:focus {
   border-radius: 1rem;
   background: var(--color-about);
   color: white;
+  font-size: var(--fontSize-1);
 }
 
 .simple-link {

@@ -10,16 +10,27 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
-      <h3>A little about me, and what this site is about</h3>
+      <h4>A little about me, and what this site is about..</h4>
       <div className="about-box">
         <p>Hi, I'm Nuwan. I'm a junior Software Engineer based in Seoul.</p>
         <p>
           While learning better ways to design and architect systems, I'd like
-          to keep this blog as a journal to share my thoughts. Obligatory
-          disclaimer, opinions here represent my own, and not my employers'.
+          to keep this blog as a journal to share my thoughts. I think the term
+          "Engineering" comes to Software when there's process involved. From
+          formulating a problem, to designing a solution, implementing, and then
+          finally testing and maintaining said solution.
         </p>
         <p>
-          If you'd like to reach me, send me a mail at{" "}
+          And I believe there's great pleasure in designing robust solutions to
+          problems, and quick "hacks" also have their own place.
+        </p>
+        <p>
+          Obligatory disclaimer, opinions here represent my own, and not my
+          employer's.
+        </p>
+        <p>
+          If you'd like to talk more about what I write, or even to say a quick
+          hi, send me a mail at{" "}
           <a href="mailto:hi@itsmenuwan.dev" className="simple-link">
             hi@itsmenuwan.dev
           </a>
