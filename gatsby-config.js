@@ -6,7 +6,7 @@ module.exports = {
       summary: ``,
     },
     description: ``,
-    siteUrl: `https://neverblur.github.io/neverblur`,
+    siteUrl: `https://neverblur.github.io`,
     social: {
       twitter: ``,
     },
