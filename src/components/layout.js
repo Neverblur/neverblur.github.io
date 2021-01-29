@@ -25,9 +25,11 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      <div className="main-heading">
+        <h6 className="logo-h6">
+          <Link to="/">{title}</Link>
+        </h6>
+      </div>
     )
   }
 

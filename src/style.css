@@ -411,7 +411,7 @@ a:focus {
   font-family: var(--font-header);
   font-weight: var(--fontWeight-semibold);
   color: #56bc72;
-  border: 1px #56bc72 solid;
+  border: 2px #56bc72 solid;
   width: max-content;
   padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--spacing-1);
@@ -475,6 +475,9 @@ a:focus {
   min-width: 50px;
   border-radius: 100%;
 }
+.blog-post {
+  margin-top: var(--spacing-12);
+}
 
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
@@ -523,6 +526,7 @@ a:focus {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  outline: 0;
 }
 
 .sendgrid-iframe {
