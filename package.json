@@ -1,11 +1,11 @@
 {
-  "name": "nuwanwre.github.io",
+  "name": "blog.neverblur.com",
   "private": true,
-  "description": "nuwanwre's personal blog",
+  "description": "Neverblur Blog",
   "version": "0.1.0",
-  "author": "nuwanwre <nuwanwre@live.com>",
+  "author": "Neverblur",
   "bugs": {
-    "url": "https://github.com/nuwanwre/nuwanwre.github.io/issues"
+    "url": "https://github.com/neverblur/neverblur-blog/issues"
   },
   "dependencies": {
     "gatsby": "^2.24.66",
@@ -43,13 +43,13 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuwanwre/nuwanwre.github.ios.git"
+    "url": "git+https://github.com/neverblur/neverblur-blog.github.ios.git"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",

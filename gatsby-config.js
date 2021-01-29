@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `nuwanwre`,
+    title: `Neverblur Blog`,
     author: {
-      name: `Nuwan`,
+      name: `Neverblur`,
       summary: ``,
     },
     description: ``,
-    siteUrl: `https://nuwanwre.github.io`,
+    siteUrl: `https://neverblur.github.io/neverblur-blog`,
     social: {
       twitter: ``,
     },
