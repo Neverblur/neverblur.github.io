@@ -1,7 +1,9 @@
 import React from "react"
+import ReactModal from "react-modal"
 import { Link } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
+  const [showModal, setShowModal] = React.useState(false)
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -42,10 +44,12 @@ const Layout = ({ location, title, children }) => {
             <p>&copy; {new Date().getFullYear()} Neverblur</p>
             <strong>Contact Us</strong>
             <a href="mailto:learnillion@gmail.com">learnillion@gmail.com</a>
-            {/* <iframe src="https://cdn.forms-content.sg-form.com/4197bc66-6248-11eb-95a5-ee005c614440" /> */}
           </div>
           <div className="footer-content">
-            <button className="subscribe-button">
+            <button
+              className="subscribe-button"
+              onClick={() => setShowModal(true)}
+            >
               <p>Get Private Access</p>
             </button>
             <div className="social-wrapper">
@@ -64,6 +68,20 @@ const Layout = ({ location, title, children }) => {
           </div>
         </div>
       </footer>
+      <ReactModal
+        isOpen={showModal}
+        onRequestClose={() => setShowModal(false)}
+        contentLabel="Example Modal In Gatsby"
+        className="subscribe-modal"
+        overlayClassName="subscribe-modal-overlay"
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+      >
+        <iframe
+          src="https://cdn.forms-content.sg-form.com/4197bc66-6248-11eb-95a5-ee005c614440"
+          className="sendgrid-iframe"
+        />
+      </ReactModal>
     </div>
   )
 }

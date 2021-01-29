@@ -245,7 +245,8 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-0) var(--spacing-5);
+  min-height: 80vh;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -259,11 +260,10 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-5) var(--spacing-5);
-  margin-bottom: var(--spacing-12);
 }
 
 .global-footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -305,6 +305,10 @@ a:focus {
   margin-bottom: var(--spacing-3);
 }
 
+.subscribe-button:hover {
+  cursor: pointer;
+}
+
 .subscribe-button > p {
   color: white;
   margin: var(--spacing-0);
@@ -340,7 +344,6 @@ a:focus {
 }
 
 .logo-h6 {
-  font-size: var(--fontSize-5);
   margin: 0;
   font-size: calc(20px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
@@ -380,6 +383,73 @@ a:focus {
 
 .post-list-item header {
   margin-bottom: var(--spacing-4);
+}
+
+.postthumb-wrapper-ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.postthumb-wrapper-ol > li {
+  flex: 1 0 21%;
+}
+
+.postthumb-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 50%;
+  padding: var(--spacing-3);
+  margin-right: var(--spacing-3);
+}
+
+.post-tag {
+  margin: var(--spacing-3) var(--spacing-0);
+  font-size: calc(12px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  font-family: var(--font-header);
+  font-weight: var(--fontWeight-semibold);
+  color: #56bc72;
+  border: 1px #56bc72 solid;
+  width: max-content;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--spacing-1);
+}
+
+.postthumb-container:hover {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.postthumb-title {
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+  font-size: calc(14px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: var(--fontWeight-semibold);
+}
+
+.postthumb-subtitle {
+  font-size: calc(12px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.pinnedpost-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--spacing-3);
+  margin-right: var(--spacing-3);
+}
+
+.pinnedpost-container:hover {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .header-link-home {
@@ -437,6 +507,31 @@ a:focus {
 .simple-link {
   color: white;
 }
+
+.subscribe-modal {
+  position: absolute;
+  top: 10%;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+}
+
+.subscribe-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sendgrid-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -447,5 +542,55 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+
+  .postthumb-wrapper-ol {
+    list-style: none;
+  }
+
+  .postthumb-wrapper-ol > li:nth-child(2n) {
+    flex-basis: 100%;
+  }
+
+  .postthumb-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 100%;
+    padding: var(--spacing-3);
+    margin-right: var(--spacing-3);
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+      0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+
+  .pinnedpost-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--spacing-3);
+    margin-right: var(--spacing-3);
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+      0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+
+  .logo-h6 {
+    font-size: var(--fontSize-4);
+    margin: 0;
+  }
+
+  .about-h6 {
+    font-size: var(--fontSize-2);
+    color: var(--color-text-light);
+    margin-right: var(--spacing-3);
+  }
+
+  .subscribe-modal {
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    right: 5px;
+    bottom: 50px;
   }
 }

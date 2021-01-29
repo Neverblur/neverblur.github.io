@@ -1,7 +1,10 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: A Twisted Tale of Salt and Eggs
+date: "2021-01-01T22:12:03.284Z"
+description: How salted eggs literally saved millions of people from a disastrous earthquake in southern Arshiqlande
+thumbnail: salty_egg.jpg
+tag: SaltedEggs
+pin: false
 ---
 
 This is my first post on my new fake blog! How exciting!
