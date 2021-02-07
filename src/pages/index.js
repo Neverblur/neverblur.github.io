@@ -1,4 +1,5 @@
 import React from "react"
+import "@fontsource/roboto"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"

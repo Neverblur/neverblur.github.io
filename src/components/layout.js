@@ -52,7 +52,7 @@ const Layout = ({ location, title, children }) => {
               className="subscribe-button"
               onClick={() => setShowModal(true)}
             >
-              <p>Get Private Access</p>
+              <p>Stay up to date with Neverblur Blog</p>
             </button>
             <div className="social-wrapper">
               <p>Connect with us: </p>
@@ -73,16 +73,23 @@ const Layout = ({ location, title, children }) => {
       <ReactModal
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
-        contentLabel="Example Modal In Gatsby"
         className="subscribe-modal"
         overlayClassName="subscribe-modal-overlay"
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
       >
-        <iframe
-          src="https://cdn.forms-content.sg-form.com/4197bc66-6248-11eb-95a5-ee005c614440"
-          className="sendgrid-iframe"
-        />
+        <div className="subscribe-modal-content">
+          <button
+            className="subscribe-modal-close-button"
+            onClick={() => setShowModal(false)}
+          >
+            <p>✕</p>
+          </button>
+          <iframe
+            src="https://cdn.forms-content.sg-form.com/4197bc66-6248-11eb-95a5-ee005c614440"
+            className="sendgrid-iframe"
+          />
+        </div>
       </ReactModal>
     </div>
   )

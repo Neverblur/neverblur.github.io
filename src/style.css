@@ -32,6 +32,7 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
+  --fontFamily-roboto: "Roboto";
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --font-footer: var(--fontFamily-sans);
@@ -392,14 +393,13 @@ a:focus {
 }
 
 .postthumb-wrapper-ol > li {
-  flex: 1 0 21%;
+  flex: 1 0 41%;
 }
 
 .postthumb-container {
   display: flex;
   flex-direction: column;
   flex: 1;
-  max-width: 50%;
   padding: var(--spacing-3);
   margin-right: var(--spacing-3);
 }
@@ -415,6 +415,7 @@ a:focus {
   width: max-content;
   padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--spacing-1);
+  font-family: var(--fontFamily-roboto);
 }
 
 .postthumb-container:hover {
@@ -427,14 +428,16 @@ a:focus {
 .postthumb-title {
   margin-top: var(--spacing-3);
   margin-bottom: var(--spacing-3);
-  font-size: calc(14px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
   font-weight: var(--fontWeight-semibold);
+  font-family: var(--fontFamily-roboto);
 }
 
 .postthumb-subtitle {
-  font-size: calc(12px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(13px + (13 - 10) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  font-family: var(--fontFamily-roboto);
 }
 
 .pinnedpost-container {
@@ -477,6 +480,8 @@ a:focus {
 }
 .blog-post {
   margin-top: var(--spacing-12);
+  margin-bottom: var(--spacing-20);
+  font-family: var(--fontFamily-roboto);
 }
 
 .blog-post header h1 {
@@ -513,10 +518,13 @@ a:focus {
 
 .subscribe-modal {
   position: absolute;
+  width: 370px;
+  height: 550px;
   top: 10%;
-  left: 40px;
+  left: 40%;
   right: 40px;
   bottom: 40px;
+  outline: none;
 }
 
 .subscribe-modal-overlay {
@@ -526,7 +534,26 @@ a:focus {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  outline: 0;
+}
+
+.subscribe-modal-content {
+  height: 100%;
+}
+
+.subscribe-modal-close-button {
+  position: absolute;
+  right: 23px;
+  top: 10px;
+  height: 20px;
+  width: 10px;
+  border: none;
+  background: transparent;
+}
+
+.subscribe-modal-close-button > p {
+  position: absolute;
+  margin: 0;
+  top: 0;
 }
 
 .sendgrid-iframe {
@@ -560,6 +587,7 @@ a:focus {
     display: flex;
     flex-direction: column;
     flex: 1;
+    font-family: var(--fontFamily-roboto);
     max-width: 100%;
     padding: var(--spacing-3);
     margin-right: var(--spacing-3);
@@ -596,5 +624,11 @@ a:focus {
     left: 5px;
     right: 5px;
     bottom: 50px;
+  }
+
+  .subscribe-button {
+    font-size: 10px;
+    padding: var(--spacing-1) var(--spacing-0);
+    margin-bottom: var(--spacing-1);
   }
 }
