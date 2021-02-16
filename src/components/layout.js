@@ -45,7 +45,7 @@ const Layout = ({ location, title, children }) => {
             <strong>Neverblur</strong>
             <p>&copy; {new Date().getFullYear()} Neverblur</p>
             <strong>Contact Us</strong>
-            <a href="mailto:learnillion@gmail.com">learnillion@gmail.com</a>
+            <a href="mailto:davidtk@neverblur.com">davidtk@neverblur.com</a>
           </div>
           <div className="footer-content">
             <button

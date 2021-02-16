@@ -12,6 +12,9 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  const pinnedPost = posts.filter(p => p.frontmatter.pin)
+  const recentPosts = posts.filter(p => p.frontmatter.pin === false)
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -31,37 +34,40 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="Blog" />
       {/* <Bio /> */}
 
-      {posts.map(post => {
-        return post.frontmatter.pin ? (
-          <PinnedPost
-            title={post.frontmatter.title}
-            subtitle={post.frontmatter.description}
-            thumbnail={post.frontmatter.thumbnail}
-            link={post.fields.slug}
-            tag={post.frontmatter.tag}
-          />
-        ) : (
-          <></>
-        )
-      })}
-      <h5>Recent Posts</h5>
-      <ol className="postthumb-wrapper-ol">
-        {posts.map(post => {
-          return post.frontmatter.pin ? (
-            <></>
-          ) : (
-            <li>
-              <PostThumb
-                title={post.frontmatter.title}
-                subtitle={post.frontmatter.description}
-                thumbnail={post.frontmatter.thumbnail}
-                link={post.fields.slug}
-                tag={post.frontmatter.tag}
-              />
-            </li>
-          )
-        })}
-      </ol>
+      {pinnedPost.length > 0 ? (
+        <PinnedPost
+          title={pinnedPost[0].frontmatter.title}
+          subtitle={pinnedPost[0].frontmatter.description}
+          thumbnail={pinnedPost[0].frontmatter.thumbnail}
+          link={pinnedPost[0].fields.slug}
+          tag={pinnedPost[0].frontmatter.tag}
+        />
+      ) : (
+        <></>
+      )}
+
+      {recentPosts.length > 0 ? (
+        <>
+          <h5>Recent Posts</h5>
+          <ol className="postthumb-wrapper-ol">
+            {recentPosts.map(post => {
+              return (
+                <li>
+                  <PostThumb
+                    title={post.frontmatter.title}
+                    subtitle={post.frontmatter.description}
+                    thumbnail={post.frontmatter.thumbnail}
+                    link={post.fields.slug}
+                    tag={post.frontmatter.tag}
+                  />
+                </li>
+              )
+            })}
+          </ol>
+        </>
+      ) : (
+        <></>
+      )}
     </Layout>
   )
 }
