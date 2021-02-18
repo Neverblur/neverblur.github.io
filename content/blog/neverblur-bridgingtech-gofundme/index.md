@@ -4,7 +4,7 @@ date: "2021-01-20T22:12:03.284Z"
 description: Bridging Tech, a charity based in San Francisco to provide Notebooks to foster homes is partnering with Neverblur to raise funds for it's next donation.
 thumbnail: banner.jpg
 tag: GoFundMe
-pin: true
+pin: false 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis velit et aliquam tristique. Donec tincidunt sollicitudin libero, a consequat lacus luctus sit amet. Quisque consectetur elementum neque ac malesuada. Pellentesque sapien tellus, tempor nec nisi fringilla, egestas elementum orci. Maecenas sit amet dolor ac mauris eleifend malesuada non eu ipsum. Nullam eu faucibus nisl. Morbi vehicula egestas lorem nec elementum. Curabitur mauris lectus, ultricies sit amet commodo ut, pellentesque ultricies dolor.
