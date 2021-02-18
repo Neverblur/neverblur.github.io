@@ -446,6 +446,7 @@ a:focus {
   flex: 1;
   padding: var(--spacing-3);
   margin-right: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
 }
 
 .pinnedpost-container:hover {

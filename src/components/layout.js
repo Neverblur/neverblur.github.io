@@ -48,12 +48,12 @@ const Layout = ({ location, title, children }) => {
             <a href="mailto:davidtk@neverblur.com">davidtk@neverblur.com</a>
           </div>
           <div className="footer-content">
-            <button
+            {/* <button
               className="subscribe-button"
               onClick={() => setShowModal(true)}
             >
               <p>Stay up to date with Neverblur Blog</p>
-            </button>
+            </button> */}
             <div className="social-wrapper">
               <p>Connect with us: </p>
               <a
