@@ -1,6 +1,6 @@
 ---
 title: How Online Learning is Failing Millions of Students
-date: "2021-02-15T22:12:03.284Z"
+date: "2021-02-28T22:12:03.284Z"
 description: Online learning has failed millions of students, under delivering Silicon Valley's original promise
 thumbnail: study_hard.jpg
 tag: Learning
